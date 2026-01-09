@@ -14,5 +14,14 @@ int main(int argc, char **argv) {
     int nNum1 = {1}, nNum2{2}, nNum3 = 3; //different type of initializations
     std::cout << nNum1 << " " << nNum2 << " " << nNum3 << std::endl; 
 
+    double half = nNum1/float(2);
+    std::cout << half << std::endl;
+
+    int xpp = nNum1++;
+    nNum1 = 1;
+    int ppx = ++nNum1;
+
+    std::cout << xpp << " " << ppx << " " << nNum1 << std::endl;
+
     return 0;
 }
