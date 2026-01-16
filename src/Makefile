@@ -6,5 +6,9 @@ stdio.exe: stdio.cpp
 	g++ stdio.cpp -o stdio.exe
 	./stdio.exe
 
+functions.exe: functions.cpp
+	g++ functions.cpp -o functions.exe
+	./functions.exe
+
 clean:
 	rm -f *.exe

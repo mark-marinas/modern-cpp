@@ -23,5 +23,13 @@ int main(int argc, char **argv) {
 
     std::cout << xpp << " " << ppx << " " << nNum1 << std::endl;
 
+    int& nRef = nNum1;
+    std::cout << "Reference=" << nRef << " " << " actual=" << nNum1 << std::endl;
+    nNum = 2;
+    std::cout << "Reference=" << nRef << " " << " actual=" << nNum1 << std::endl;
+    nRef = 3;
+    std::cout << "Reference=" << nRef << " " << " actual=" << nNum1 << std::endl;
+
+
     return 0;
 }
