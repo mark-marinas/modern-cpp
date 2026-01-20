@@ -10,6 +10,7 @@ typedef enum COLOR {
 
 class Car {
     private:
+        std::string name;
         color_t color;
         std::string make;
         int year;
@@ -36,11 +37,13 @@ class Car {
                     c = "BLACK";
                     break;
             }
+            std::cout << "Owner:\t" << name << std::endl;
             std::cout << "Color:\t" << color << std::endl;
             std::cout << "Make:\t" << make << std::endl;
             std::cout << "Year:\t" << year << std::endl;
         } 
-};
+        void set_name(std::string name){ this->name = name; }
+    };
 
 
 int main() {
@@ -48,6 +51,10 @@ int main() {
     Car MarlaCar = MyCar;
     Car AmbieCar;
     AmbieCar = MyCar;
+
+    MyCar.set_name("Mark");
+    MarlaCar.set_name("Marla");
+    AmbieCar.set_name("Ambie");
 
     MyCar.info();
     MarlaCar.info();
