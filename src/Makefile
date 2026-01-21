@@ -14,5 +14,9 @@ classes.exe: classes.cpp
 	g++ -std=c++2a classes.cpp -o classes.exe
 	./classes.exe
 
+inheritance.exe: inheritance_polymorphism.cpp
+	g++ -std=c++2a inheritance_polymorphism.cpp -o inheritance.exe
+	./inheritance.exe
+
 clean:
 	rm -f *.exe
