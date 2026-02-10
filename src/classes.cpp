@@ -108,6 +108,24 @@ class Accumulator {
         int get_value() { return value; }
 };
 
+template<typename T>
+class Generic {
+    public:
+        T add(T a, T b);
+};
+
+template <typename T>
+T Generic<T>::add(T a, T b)
+{
+    return (a + b);
+}
+
+template <>
+std::string Generic<std::string>::add(std::string a, std::string b)
+{
+    return a + ":" + b;
+}
+
 int main() {
     Car MyCar { RED, "Honda", 2025};    //calls constructor
     Car MarlaCar = MyCar;               //calls copy constructor
@@ -156,4 +174,8 @@ int main() {
     int doubled = Acc*2;
     std::cout << doubled << std::endl;
 
+
+    Generic<int> nInt;
+    Generic<std::string> nStr;
+    std::cout << nInt.add(5,10) << " " << nStr.add("hi", "mark") << std::endl;
 }
