@@ -18,5 +18,9 @@ inheritance.exe: inheritance_polymorphism.cpp
 	g++ -std=c++2a inheritance_polymorphism.cpp -o inheritance.exe
 	./inheritance.exe
 
+smart_pointers.exe: smart_pointers.cpp
+	g++ -std=c++2a smart_pointers.cpp -o smart_pointers.exe
+	./smart_pointers.exe
+
 clean:
 	rm -f *.exe
