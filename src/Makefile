@@ -27,5 +27,9 @@ exception.exe: exception.cpp
 	./exception.exe int
 	./exception.exe dbl
 
+streams.exe: streams.cpp
+	g++ -std=c++2a streams.cpp -o streams.exe
+	./streams.exe
+
 clean:
 	rm -f *.exe
