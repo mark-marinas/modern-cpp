@@ -7,7 +7,7 @@ fs << s; from s to file stream
 
 1. file streams
     are by default input file streams.
-    to make it output file streams (that is, write to a file), use std::ios::out.
+    to make it output file streams (that is, write to a file), use std::ios::out, std::ios::app to append
 
 2. string streams
 */
