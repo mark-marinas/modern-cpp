@@ -22,5 +22,10 @@ smart_pointers.exe: smart_pointers.cpp
 	g++ -std=c++2a smart_pointers.cpp -o smart_pointers.exe
 	./smart_pointers.exe
 
+exception.exe: exception.cpp
+	g++ exception.cpp -o exception.exe
+	./exception.exe int
+	./exception.exe dbl
+
 clean:
 	rm -f *.exe
