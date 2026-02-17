@@ -12,10 +12,10 @@ fs << s; from s to file stream
 2. string streams
     use <sstream>
     istringstream for input streams, ostringstream for output streams, stringstreams for both.
-    ss << "string" - to insert to a stream.
+    ss << "string" - to insert to a stream. When it inserts a string, it automatically splits it by white space.
     ss >> to extract from a string. It stops extracting when it encounters a white space.
         or use getline(ss, buffer, delim)
-
+    useful for reading formatted strings, or converting from string to other data type (int, double, etc), and vice versa.
 */
 
 #include <iostream>
@@ -75,6 +75,14 @@ int main() {
         cout << key << ":" << value << endl;
     }
 
+    stringstream s1;
+    s1 << 10 << 'c' << 3.14; s1 << "hello mark";
+    int ten; 
+    double pi;
+    string name;
+    s1 >> ten; s1 >> c; s1 >> pi; s1 >> name;
+    cout << ten << " " << c << " " << pi << " " << name;
+    cout << endl;
 
 
 
