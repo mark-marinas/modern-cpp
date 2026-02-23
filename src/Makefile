@@ -31,5 +31,9 @@ streams.exe: streams.cpp
 	g++ -std=c++2a streams.cpp -o streams.exe
 	./streams.exe
 
+standard_library.exe: standard_library.cpp
+	g++ -std=c++2a standard_library.cpp -o standard_library.exe
+	./standard_library.exe
+
 clean:
 	rm -f *.exe
