@@ -21,8 +21,8 @@ void print_names(array<Name, SIZE>& n)
     }
 }
 */
-void print_names(vector<Name>& names) {
-    for (Name& name: names) {
+void print_names(const vector<Name>& names) {
+    for (auto name: names) {
         cout << name.get_fullname() << endl;
     }
 }
