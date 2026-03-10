@@ -35,5 +35,9 @@ standard_library.exe: standard_library.cpp
 	g++ -std=c++2a standard_library.cpp -o standard_library.exe
 	./standard_library.exe
 
+thread.exe: threads.cpp
+	g++ -std=c++2a threads.cpp -o thread.exe -pthread
+	./thread.exe
+
 clean:
 	rm -f *.exe
